@@ -1,0 +1,309 @@
+
+:root {
+    --almost-black:#111;
+    --dark-grey:#1E1823;
+    --grey-color:rgba(17, 17, 17, 0.70);
+    --light-grey:rgba(17, 17, 17, 0.10);
+    --almost-white:rgba(255, 255, 255, 0.70);
+    --white-color:#fff;
+    --light-orange:#FCF1E0;
+    --dark-orange:#FD9222;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+  }
+
+
+
+/* Stilizare pt OUR PRODUCT */
+.our-products {
+    width: 100vw;;
+    min-width: 320px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    min-width: 320px;
+    
+}
+
+.title-our-products {
+font-family: Montserrat;
+font-weight: 600;
+letter-spacing: -0.03em;
+text-align: center;
+color: var(--almost-black);
+margin: 0;
+max-width: 1136px;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.title-our-products span {
+    color: var(--dark-orange);
+}
+
+.swiper-wrapper {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* gap: 18px; */
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    /* width: 270px;
+    height: 364px; */
+    margin: 0;
+    background-color: var(--white-color);
+    
+}
+.swiper-wrapper>.product-slide {
+    
+    height: 364px;
+    padding: 32px 20px;
+}
+
+
+
+.swiper-slide picture {
+    display: block;
+    width: 100%;
+    
+    object-fit: cover;
+}
+
+
+
+.product-names {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: var(--almost-black);
+    padding-top: 8px;
+    padding-bottom: 2px;
+    margin: 0;
+}
+
+.chocolate-types {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: var(--grey-color);
+    padding-bottom: 18px;
+    margin: 0;
+
+}
+
+.swiper-wrapper .product-price-btn {
+    margin: 0 auto;
+}
+
+.product-price-btn {
+    width: 96px;
+    height: 33px;
+    padding: 8px 20px 8px 19px;
+    border-radius: 100px;
+    gap: 14px;
+    background: #FAFAFA;
+    border: 1px solid #1111111A;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+
+.swiper-pagination.product.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal>.swiper-pagination-bullet {
+    /* margin: 0 13px; */
+   margin: 0;
+}
+
+.swiper-pagination.product.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    min-width: 320px;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    gap: 13px;
+    justify-content: center;
+}
+
+.swiper-pagination {
+    cursor: pointer;
+   
+    
+}
+
+
+.our-products .swiper-pagination-bullet-active {
+    background: var(--dark-orange,var(--dark-orange));
+    width: 28px;
+    height: 13px;
+    opacity: 1;
+    border-radius: 7px;
+    transition: ease-in .25s;
+       
+    
+    
+
+}
+
+/* .our-products .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    border-radius: var(--swiper-pagination-bullet-border-radius,50%);
+    background: #1111111A;
+    opacity: 1;
+
+} */
+
+.swiper-pagination>span {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    border-radius: var(--swiper-pagination-bullet-border-radius,50%);
+    background: #1111111A;
+    opacity: 1;
+    
+}
+
+
+
+/* Stilizare pentru mobil */
+
+@media screen and (max-width: 767px) {
+
+    
+    /* Mobil- OUR PRODUCTS */
+    .our-products {
+        padding: 72px 20px;
+    }
+    
+    .title-our-products {
+        font-size: 20px;
+        line-height: 24px;
+        padding-bottom: 32px;
+        /* max-width: 453px; */
+    }
+
+    .swiper {
+        max-width: 335px;
+    }
+
+    .swiper-wrapper>.product-slide {
+        padding: 32px 52px;
+    }
+    .swiper-wrapper li {
+        width: Fixed (335px);
+        height: Fixed (453px);
+
+    }
+
+    /* Suprascriu stilurile pentru poziționarea punctelor de paginatie */
+.our-products .swiper-pagination-bullets.swiper-pagination-horizontal,
+.our-products .swiper-pagination-custom,
+.our-products .swiper-pagination-fraction {
+    bottom: 43px; /* modific valoarea bottom predefinită */}
+}
+
+/* Stilizare pentru tableta */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+   
+
+    /* Tableta - OUR PRODUCTS */
+    .our-products {
+        padding: 100px 32px;
+    }
+
+    .title-our-products {
+        font-size: 24px;
+        line-height: 28px;
+        padding-bottom: 50px;
+        /* max-width: 614px; */
+    }
+
+    .container-swiper {
+        /* max-width: 691px; */
+    }
+
+    .swiper-wrapper li {
+        max-width: 270px;
+        min-width: 270px;
+        height: 364px;
+
+    }
+/* Suprascriu stilurile pentru poziționarea punctelor de paginatie */
+.our-products .swiper-pagination-bullets.swiper-pagination-horizontal,
+.our-products .swiper-pagination-custom,
+.our-products .swiper-pagination-fraction {
+    bottom: 62px; /* modific valoarea bottom predefinită */}
+}  
+
+/* Stilizare pentru desktop */
+@media screen and (min-width: 1200px) {
+    
+    
+    /* Desktop - OUR PRODUCTS */
+    .our-products {
+        padding: 128px 32px;
+    }
+    .title-our-products {
+        font-size: 24px;
+        line-height: 28px;
+        padding-bottom: 50px;
+        max-width: 1136px;
+    }
+
+    .swiper {
+        max-width: 1136px;
+    }
+
+    .swiper-wrapper li {
+        max-width: 270px;
+        min-width: 270px;
+        height: 364px;
+
+    }
+
+    /* Suprascriu stilurile pentru poziționarea punctelor de paginatie */
+    .our-products .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .our-products .swiper-pagination-custom,
+    .our-products .swiper-pagination-fraction {
+    bottom: 85px; /* modific valoarea bottom predefinită */
+   
+    }
+
+    
+
+}
