@@ -17,6 +17,7 @@ body {
 
 
 /* Stilizare pt OUR PRODUCT */
+/* containerul general */
 .our-products {
     width: 100vw;;
     min-width: 320px;
@@ -28,16 +29,8 @@ body {
     position: relative;
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
-    cursor: grab;
-    min-width: 320px;
-    
-}
-
+/* titlul */
 .title-our-products {
-font-family: Montserrat;
 font-weight: 600;
 letter-spacing: -0.03em;
 text-align: center;
@@ -53,15 +46,23 @@ margin-right: auto;
     color: var(--dark-orange);
 }
 
+/* sub-containerul cu produsele */
+.swiper {
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    min-width: 320px;
+}
+
 .swiper-wrapper {
     list-style: none;
     width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
-    /* gap: 18px; */
 }
 
+/* fiecare card cu produs, descriere si pret */
 .swiper-slide {
     display: flex;
     flex-direction: column;
@@ -69,31 +70,24 @@ margin-right: auto;
     border: 1px solid rgba(17, 17, 17, 0.1);
     border-radius: 15px;
     text-align: center;
-    /* width: 270px;
-    height: 364px; */
     margin: 0;
     background-color: var(--white-color);
-    
 }
+
+/* pozele cu produsele */
 .swiper-wrapper>.product-slide {
-    
     height: 364px;
     padding: 32px 20px;
 }
 
-
-
 .swiper-slide picture {
     display: block;
     width: 100%;
-    
     object-fit: cover;
 }
 
-
-
+/* descrierile produselor */
 .product-names {
-    font-family: Montserrat;
     font-size: 18px;
     font-weight: 600;
     line-height: 24px;
@@ -106,7 +100,6 @@ margin-right: auto;
 }
 
 .chocolate-types {
-    font-family: Montserrat;
     font-size: 12px;
     font-weight: 400;
     line-height: 14px;
@@ -118,6 +111,7 @@ margin-right: auto;
 
 }
 
+/* button-ul cu pretul */
 .swiper-wrapper .product-price-btn {
     margin: 0 auto;
 }
@@ -139,16 +133,10 @@ margin-right: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
-
 }
 
-.swiper-pagination.product.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal>.swiper-pagination-bullet {
-    /* margin: 0 13px; */
-   margin: 0;
-}
-
+/* ANIMATIA CU SWIPER */
+/* restilizarea zonei de paginatie; sunt puse toate clasele din codul de linie ul pt a creste specificatia si sa pot suprascrie stilizarea din librarie */
 .swiper-pagination.product.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
     min-width: 320px;
     padding-left: 60px;
@@ -158,13 +146,17 @@ margin-right: auto;
     justify-content: center;
 }
 
-.swiper-pagination {
-    cursor: pointer;
-   
-    
+/* anulare margini stabilite de libraria externa pt bullets-uri */
+.swiper-pagination.product.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal>.swiper-pagination-bullet {
+    /* margin: 0 13px; */
+   margin: 0;
 }
 
+.swiper-pagination {
+    cursor: pointer;
+}
 
+/* stilizarea punctelor de paginatie */
 .our-products .swiper-pagination-bullet-active {
     background: var(--dark-orange,var(--dark-orange));
     width: 28px;
@@ -172,21 +164,7 @@ margin-right: auto;
     opacity: 1;
     border-radius: 7px;
     transition: ease-in .25s;
-       
-    
-    
-
 }
-
-/* .our-products .swiper-pagination-bullet {
-    width: 13px;
-    height: 13px;
-    display: inline-block;
-    border-radius: var(--swiper-pagination-bullet-border-radius,50%);
-    background: #1111111A;
-    opacity: 1;
-
-} */
 
 .swiper-pagination>span {
     width: 13px;
@@ -195,7 +173,6 @@ margin-right: auto;
     border-radius: var(--swiper-pagination-bullet-border-radius,50%);
     background: #1111111A;
     opacity: 1;
-    
 }
 
 
@@ -203,8 +180,6 @@ margin-right: auto;
 /* Stilizare pentru mobil */
 
 @media screen and (max-width: 767px) {
-
-    
     /* Mobil- OUR PRODUCTS */
     .our-products {
         padding: 72px 20px;
@@ -214,7 +189,6 @@ margin-right: auto;
         font-size: 20px;
         line-height: 24px;
         padding-bottom: 32px;
-        /* max-width: 453px; */
     }
 
     .swiper {
@@ -224,23 +198,18 @@ margin-right: auto;
     .swiper-wrapper>.product-slide {
         padding: 32px 52px;
     }
-    .swiper-wrapper li {
-        width: Fixed (335px);
-        height: Fixed (453px);
 
+    /* Suprascriu stilurile pentru pozitionarea pe verticala a punctelor de paginatie */
+    .our-products .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .our-products .swiper-pagination-custom,
+    .our-products .swiper-pagination-fraction {
+        bottom: 43px; /* modific valoarea bottom predefinită */
     }
-
-    /* Suprascriu stilurile pentru poziționarea punctelor de paginatie */
-.our-products .swiper-pagination-bullets.swiper-pagination-horizontal,
-.our-products .swiper-pagination-custom,
-.our-products .swiper-pagination-fraction {
-    bottom: 43px; /* modific valoarea bottom predefinită */}
 }
 
 /* Stilizare pentru tableta */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
    
-
     /* Tableta - OUR PRODUCTS */
     .our-products {
         padding: 100px 32px;
@@ -250,24 +219,20 @@ margin-right: auto;
         font-size: 24px;
         line-height: 28px;
         padding-bottom: 50px;
-        /* max-width: 614px; */
-    }
-
-    .container-swiper {
-        /* max-width: 691px; */
     }
 
     .swiper-wrapper li {
         max-width: 270px;
         min-width: 270px;
         height: 364px;
-
     }
-/* Suprascriu stilurile pentru poziționarea punctelor de paginatie */
-.our-products .swiper-pagination-bullets.swiper-pagination-horizontal,
-.our-products .swiper-pagination-custom,
-.our-products .swiper-pagination-fraction {
-    bottom: 62px; /* modific valoarea bottom predefinită */}
+
+    /* Suprascriu stilurile pentru pozitionarea pe verticala a punctelor de paginatie */
+    .our-products .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .our-products .swiper-pagination-custom,
+    .our-products .swiper-pagination-fraction {
+        bottom: 62px; /* modific valoarea bottom predefinită */
+    }
 }  
 
 /* Stilizare pentru desktop */
@@ -278,6 +243,7 @@ margin-right: auto;
     .our-products {
         padding: 128px 32px;
     }
+
     .title-our-products {
         font-size: 24px;
         line-height: 28px;
@@ -293,17 +259,12 @@ margin-right: auto;
         max-width: 270px;
         min-width: 270px;
         height: 364px;
-
     }
 
-    /* Suprascriu stilurile pentru poziționarea punctelor de paginatie */
+    /* Suprascriu stilurile pentru poziionarea pe verticala a punctelor de paginatie */
     .our-products .swiper-pagination-bullets.swiper-pagination-horizontal,
     .our-products .swiper-pagination-custom,
     .our-products .swiper-pagination-fraction {
-    bottom: 85px; /* modific valoarea bottom predefinită */
-   
+        bottom: 85px; /* modific valoarea bottom predefinită */
     }
-
-    
-
 }
